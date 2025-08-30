@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PetScore Web</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+<div class="container">
+  <h1>PetScore</h1>
+  <div id="roleSelect">
+    <button onclick="showOwner()">Soy dueño</button>
+    <button onclick="showHotel()">Soy hotel</button>
+  </div>
+  <div id="ownerHome" class="hidden">
+    <h2>Mis mascotas</h2>
+    <ul id="petList"></ul>
+    <button onclick="addPetForm()">Añadir mascota</button>
+  </div>
+  <div id="hotelHome" class="hidden">
+    <h2>Panel Hotel</h2>
+    <ul id="petListHotel"></ul>
+  </div>
+  <div id="petForm" class="hidden">
+    <h3>Nueva mascota</h3>
+    <input type="text" id="petName" placeholder="Nombre">
+    <input type="text" id="petBreed" placeholder="Raza">
+    <input type="number" id="petAge" placeholder="Edad">
+    <input type="text" id="ownerName" placeholder="Dueño">
+    <button onclick="savePet()">Guardar</button>
+    <button onclick="backToOwner()">Cancelar</button>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
